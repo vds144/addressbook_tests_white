@@ -12,7 +12,7 @@ namespace addressbook_tests_white
         public void TestGroupCreation()
         {
 
-            List<GroupData> oldGroups = app.Groups.GetGroupList();
+            List<GroupData> oldGroups = app.Groups.GetGroupsList();
 
             GroupData newGroup = new GroupData()
             {
@@ -21,7 +21,7 @@ namespace addressbook_tests_white
 
              app.Groups.Add(newGroup);
 
-             List<GroupData> newGroups = app.Groups.GetGroupList();
+             List<GroupData> newGroups = app.Groups.GetGroupsList();
             oldGroups.Add(newGroup);
             oldGroups.Sort();
            newGroups.Sort();
